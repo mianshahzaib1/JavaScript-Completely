@@ -1,0 +1,39 @@
+/* ---------1---------- */
+/* *{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    width: 100vw;
+    height: 15vh;
+    background-color: aquamarine;
+}
+nav ul li{
+    display: inline;
+    padding: 10px;
+    margin-left: 30px;
+}
+input{
+    margin-left: 40px;
+    margin-right: 10px;
+}
+button{
+    border-radius: 3px;
+    background-color: black;
+    color: wheat;
+}
+
+nav ul li:first-child{
+    color: red;
+} */
+
+
+/* ----------3--------- */
+/* header :first-child{
+    color: green;
+}
+header :last-child{
+    color:green;
+} */
+
+

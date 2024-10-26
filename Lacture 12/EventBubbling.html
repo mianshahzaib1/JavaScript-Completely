@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+    .container{
+        width: 340px;
+        height: 140px;
+        border: 15px solid greenyellow;
+        margin-left: 150px;
+        margin-top: 50px;
+        
+    }
+    .childContainer{
+         width: 320px;
+         height: 120px;
+         border: 12px solid grey;
+    }
+    .child{
+        width: 315px;
+        height: 115px;
+        border: 4px solid black;
+    }
+    </style>
+    
+</head>
+<body>
+<div class="container">
+    <div class="childContainer">
+        <div class="child">This is a Child</div>
+    </div>
+</div>
+
+<script>
+    document.querySelector(".child").addEventListener("click",(e)=>{
+        alert("Child Was Clicked")
+    })
+
+    document.querySelector(".childContainer").addEventListener("click",(e)=>{       
+        alert("Container Child was Clicked")
+    })
+
+    document.querySelector(".container").addEventListener("click",(e)=>{  
+        alert("Container Was Clicked")
+    })
+
+    
+function getRandomColor(){
+  let val1 = Math.ceil( 0 + Math.random()* 255)
+  let val2 = Math.ceil( 0 + Math.random()* 255);
+  let val3 = Math.ceil( 0 + Math.random()* 255);
+
+  return `(${val1},${val2},${val3})`
+}
+
+
+setInterval(() => {
+    document.querySelector('.childContainer').style.background = getRandomColor()
+}, 3000);
+
+
+
+</script>
+</body>
+</html>
